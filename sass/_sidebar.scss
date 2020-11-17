@@ -2,4 +2,128 @@
   background-color: $color-primary;
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1 / -1;
+
+  z-index: 100;
+  box-shadow: 0 2rem 2rem rgba(#000, 0.3);
+  transition: all 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    align-items: flex-end;
+    // position: sticky;
+    top: 0;
+  }
+  &__container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @media screen and (max-width: $bp-large) {
+      // background: #c69a63;
+      // overflow: hidden;
+      position: relative;
+    }
+  }
+  &__list {
+    display: none;
+    list-style: none;
+    &--show {
+      display: block;
+      @media screen and (max-width: $bp-large) {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    &:link,
+    &:visited {
+      color: #fff;
+      font-family: $font-primary;
+      font-size: 2.5rem;
+
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.2s;
+
+      display: block;
+      padding: 1rem 6rem;
+      margin: 1rem 0;
+    }
+    &:hover {
+      background-color: #fff;
+      color: $color-primary;
+    }
+  }
+}
+
+.btn-container {
+  cursor: pointer;
+  height: 8rem;
+
+  @media screen and (max-width: $bp-large) {
+    height: auto;
+    pointer-events: none;
+    &:hover > .btn-nav {
+      transform: rotate(90deg);
+    }
+  }
+  &--back {
+    transform: rotate(180deg);
+  }
+
+  &:hover > .btn-nav {
+    &::before {
+      transform: rotate(45deg);
+      top: -4px;
+      right: -4px;
+      width: 30%;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      top: 4px;
+      right: -4px;
+      width: 30%;
+    }
+  }
+}
+.btn-nav {
+  border: none;
+  border-radius: 0;
+
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  position: relative;
+  margin-top: 4rem;
+  transition: all 0.5s;
+
+  @media screen and (max-width: $bp-large) {
+    margin-top: 2.5rem;
+    margin-right: 1.5rem;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    height: 2px;
+    width: 4.5rem;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    transition: all 0.1s;
+  }
+  &::before {
+    top: -1.5rem;
+  }
+  &::after {
+    top: 1.5rem;
+  }
 }

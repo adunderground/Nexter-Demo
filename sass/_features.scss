@@ -11,6 +11,16 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   align-items: start;
+
+  @media screen and (max-width: $bp-md) {
+    margin: 12rem 0;
+  }
+  @media screen and (max-width: $bp-sm) {
+    margin: 10rem 0;
+  }
+  @media screen and (max-width: $bp-xsm) {
+    margin: 7rem 0;
+  }
 }
 
 .feature {
