@@ -500,7 +500,7 @@ body {
   grid-gap: 2rem; }
   @media screen and (min-width: 87.5em) {
     .nav {
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); } }
   .nav__link:link, .nav__link:visited {
     font-size: 1.4rem;
     color: #fff;
