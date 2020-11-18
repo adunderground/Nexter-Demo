@@ -40,4 +40,14 @@
   margin-left: auto;
   text-align: center;
   width: 60%;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: $color-primary;
+  }
+  span{
+    display: block;  
+  }
 }

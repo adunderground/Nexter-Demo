@@ -163,12 +163,12 @@ body {
     transform: rotate(180deg); }
   .btn-container:hover > .btn-nav::before {
     transform: rotate(45deg);
-    top: -4px;
+    top: -5px;
     right: -4px;
     width: 30%; }
   .btn-container:hover > .btn-nav::after {
     transform: rotate(-45deg);
-    top: 4px;
+    top: 5px;
     right: -4px;
     width: 30%; }
 
@@ -177,7 +177,7 @@ body {
   border-radius: 0;
   background-color: #fff;
   height: 2px;
-  width: 4.5rem;
+  width: 5rem;
   position: relative;
   margin-top: 4rem;
   transition: all 0.5s; }
@@ -188,7 +188,7 @@ body {
   .btn-nav::before, .btn-nav::after {
     content: '';
     height: 2px;
-    width: 4.5rem;
+    width: 5rem;
     background-color: #fff;
     display: block;
     position: absolute;
@@ -520,3 +520,10 @@ body {
   margin-left: auto;
   text-align: center;
   width: 60%; }
+  .copyright a:link,
+  .copyright a:visited {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #c69963; }
+  .copyright span {
+    display: block; }
